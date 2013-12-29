@@ -1,3 +1,4 @@
 #!/bin/bash
 
 echo "Some output"
+echo "Some error output" 1>&2
