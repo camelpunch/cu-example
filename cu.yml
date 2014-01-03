@@ -2,3 +2,4 @@
 bucket: bucket-where-my-logs-go
 log-key: logsgohere
 queue: my-worker-queue
+workspaces-path: tmp/cu-workspaces
