@@ -1,5 +1,15 @@
 ---
-bucket: bucket-where-my-logs-go
-log-key: logsgohere
-queue: my-worker-queue
+bucket: cu-test
+log-key: cu-example-logs
 workspaces-path: tmp/cu-workspaces
+pipeline:
+  test-web-app-units:
+    script: "date"
+    repo: &web-repo https://github.com/camelpunch/cu-example
+  test-web-app-integrations:
+    script: "date"
+    repo: *web-repo
+  downstream: # downstream of two jobs
+    deploy-web-app:
+      script: "date"
+      repo: *web-repo
